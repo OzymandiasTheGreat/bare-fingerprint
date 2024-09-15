@@ -1,0 +1,33 @@
+{
+  "name": "bare-fingerprint",
+  "version": "0.1.0",
+  "description": "Fingerprint your Bare build so you know when you need to recompile",
+  "bin": "build/bin/cli.js",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "repository": "https://github.com/OzymandiasTheGreat/bare-fingerprint",
+  "author": {
+    "name": "Tomas Ravinskas",
+    "email": "tomas@tomasrav.me",
+    "url": "https://tomasrav.me/"
+  },
+  "license": "Apache-2.0",
+  "files": [
+    "bin",
+    "build",
+    "src",
+    "NOTICE"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/bin/cli.js",
+    "watch": "chmod +x build/bin/cli.js && tsc --watch",
+    "clean": "rm -rf node_modules/ yarn.lock"
+  },
+  "dependencies": {
+    "find-up": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "typescript": "^5.6.2"
+  }
+}
